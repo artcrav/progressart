@@ -85,7 +85,7 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--ink);font-
 .cards-list{display:flex;flex-direction:column;gap:6px}
 .card{background:var(--white);border:1.5px solid var(--border);border-radius:10px;padding:10px 13px;transition:border-color 130ms,box-shadow 130ms}
 .card:hover{border-color:var(--border2);box-shadow:var(--shadow)}
-.card-top{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.card-top{display:flex;align-items:center;gap:8px;margin-bottom:2px}
 .card-name{font-size:13px;font-weight:800;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .card-client{font-size:10px;color:var(--ink3);font-weight:600;white-space:nowrap}
 .badges{display:flex;gap:3px;flex-wrap:wrap;align-items:center;margin-bottom:5px}
@@ -720,10 +720,11 @@ function renderOrders(){
     var wkTag=o.slotW?'Wk'+o.slotW+' '+(MO_S[o.slotM]||''):'';
     var modeLbl=o.mode==='rush'?'Rush'+(o.rushTier?' · Tier '+o.rushTier:''):'Normal';
     return '<div class="card">'
-      +'<div class="card-top">'
-      +'<div class="card-name">'+o.title+'</div>'
-      +'<div class="card-client">'+(o.client||'—')+'</div>'
-      +'<div class="badges">'
+  +'<div class="card-top">'
+  +'<div class="card-name">'+o.title+'</div>'
+  +'</div>'
+  +'<div class="card-client" style="margin-bottom:5px">'+(o.client||'—')+'</div>'
+  +'<div class="badges">'
       +'<span class="badge b-'+o.type+'">'+o.type.toUpperCase()+'</span>'
       +'<span class="badge b-'+o.status+'">'+o.status+'</span>'
       +'<span class="badge b-'+o.mode+'">'+modeLbl+'</span>'
