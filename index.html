@@ -391,8 +391,11 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--ink);font-
 <div class="view active" id="view-client">
 <div class="client-wrap">
   <div class="client-header">
-    <div class="client-logo">CRAVING <span>ART</span></div>
+  <div class="client-logo">CRAVING <span>ART</span></div>
+  <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+    <a href="https://artcrav.github.io/artcraving" target="_blank" rel="noopener noreferrer" style="font-size:11px;font-weight:700;color:var(--ink3);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:5px 12px;border-radius:6px;text-decoration:none;transition:100ms">Home</a>
     <button class="artist-btn" onclick="promptArtist()">Artist login</button>
+   </div>
   </div>
   <div id="db-status" style="display:none;text-align:center;padding:14px;font-size:12px;font-weight:700;color:var(--ink3)">Memuat data…</div>
   <div class="client-hero">
